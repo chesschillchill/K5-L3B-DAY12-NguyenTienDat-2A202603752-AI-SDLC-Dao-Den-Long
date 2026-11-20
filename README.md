@@ -5,6 +5,34 @@
 
 ---
 
+## Chơi Đêm 1 – Đảo Bến
+
+Cần Node.js 24 theo [`.nvmrc`](.nvmrc), npm và trình duyệt hỗ trợ WebGL 2. Trên macOS hoặc Linux, chạy trong thư mục repo:
+
+```sh
+npm ci
+npm run dev
+```
+
+Mở URL Vite in ra và chọn **Bắt đầu**. Dùng **W A S D** hoặc phím mũi tên để đi, **Space** để nhảy và giữ chuột trái rồi kéo ngang để xoay camera. Mây tự nhặt đom đóm khi đến gần. Bấm **E** gần đèn chưa sáng để nạp, **F** để dùng hai đom đóm xua Bóng Mực. Vòng vàng quanh đèn đã thắp là vùng an toàn. Thắp đủ năm đèn để thắng trước bình minh. Chọn **Chơi lại** để bắt đầu lượt mới.
+
+- **Điểm:** +10 mỗi đom đóm, +100 mỗi đèn thắp và +20 mỗi Bóng Mực bị choáng. Khi thắng, cộng 1 điểm mỗi giây nguyên còn lại và 25 điểm mỗi lửa còn lại.
+- **Luật Đêm 1:** rìa đảo giữ Mây trên đất, game không có dash và khi bị chạm Mây giữ số đom đóm đang mang. Mọi trị số gameplay theo [`game.contract.json`](game.contract.json).
+
+### Sáng tạo của tôi
+
+Đêm 1 có biển mây đa giác, trăng tròn và các tán cây hình khối. Khi một đèn sáng, vòng vàng vẽ rõ vùng an toàn. Mây dùng F thì quầng sáng lan ra. Cảnh và hiệu ứng nằm trong lớp hiển thị Three.js. [Ảnh chơi thật](docs/proof/phase-1/browser-playing.png) · [Đầu ra headless](docs/proof/phase-1/win.jsonl)
+
+### Kiểm chứng và chạy headless
+
+```sh
+npm run verify
+node src/headless.js --seed 12 --night 1 --ticks 1500 --snapshot-every 60 \
+  --inputs test/fixtures/walk-the-lanterns.json --out /tmp/dao-den-long.jsonl
+```
+
+`npm run verify` chạy bộ test rồi build bản web vào `dist/`. CLI có thể dùng thêm `--scenario <file.json>` để dựng tình huống kiểm thử. Xem [bằng chứng Phase 1](docs/proof/phase-1/README.md), [giả định và nhật ký AI](docs/notes/phase-1.md) và [nguồn nội dung](CREDITS.md).
+
 ## Tài liệu của lab
 
 | File | Nội dung |

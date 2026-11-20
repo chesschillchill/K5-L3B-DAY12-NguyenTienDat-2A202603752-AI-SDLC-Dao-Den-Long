@@ -1,0 +1,53 @@
+{
+  "browser": "Chrome/157.0.8103.50",
+  "checks": [
+    {
+      "check": "Walk to first lantern and light it",
+      "observed": {
+        "flames": "3",
+        "carried": "1/12",
+        "lantern-count": "1/5",
+        "clock": "2:58",
+        "score": "150",
+        "panel-title": "Đảo Đèn Lồng",
+        "play": "Bắt đầu"
+      }
+    },
+    {
+      "check": "Light all five lanterns using keyboard and camera drag",
+      "observed": {
+        "flames": "3",
+        "carried": "8/12",
+        "lantern-count": "5/5",
+        "clock": "2:49",
+        "score": "1023",
+        "panel-title": "Đảo đã sáng!",
+        "play": "Chơi lại"
+      }
+    },
+    {
+      "check": "Restart after a win and lose to shades",
+      "observed": {
+        "flames": "0",
+        "carried": "0/12",
+        "lantern-count": "0/5",
+        "clock": "2:51",
+        "score": "0",
+        "panel-title": "Ngọn lửa tắt",
+        "play": "Chơi lại"
+      }
+    },
+    {
+      "check": "Restart after a loss with a fresh HUD and hidden end panel",
+      "observed": {
+        "flames": "3",
+        "carried": "0/12",
+        "lantern-count": "0/5",
+        "clock": "3:00",
+        "score": "0",
+        "panel-title": "Ngọn lửa tắt",
+        "play": "Chơi lại"
+      }
+    }
+  ]
+}

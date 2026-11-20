@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#221831">
+    <title>Đảo Đèn Lồng</title>
+    <link rel="stylesheet" href="/src/web/style.css">
+  </head>
+  <body>
+    <main id="game" aria-label="Đảo Đèn Lồng">
+      <canvas id="scene" aria-label="Màn chơi Đêm 1"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <header class="hud">
+        <div>
+          <p class="chapter">Đêm 1 · Đảo Bến</p>
+          <h1>Đảo Đèn Lồng</h1>
+        </div>
+        <dl class="stats">
+          <div><dt>Lửa</dt><dd id="flames"></dd></div>
+          <div><dt>Ánh sáng</dt><dd id="carried"></dd></div>
+          <div><dt>Đèn đã thắp</dt><dd id="lantern-count"></dd></div>
+          <div><dt>Trước bình minh</dt><dd id="clock"></dd></div>
+          <div><dt>Điểm</dt><dd id="score"></dd></div>
+        </dl>
+      </header>
+      <p id="hint" class="hint" hidden></p>
+      <footer class="controls" aria-label="Điều khiển">
+        <span><kbd>W A S D</kbd> Di chuyển</span>
+        <span><kbd>Space</kbd> Nhảy</span>
+        <span><kbd>Kéo chuột</kbd> Nhìn</span>
+        <span><kbd>E</kbd> Nạp đèn</span>
+        <span><kbd>F</kbd> Tỏa sáng</span>
+      </footer>
+      <div id="panel" class="veil">
+        <section aria-labelledby="panel-title">
+          <p class="chapter" id="panel-kicker">Đêm 1 · Đảo Bến</p>
+          <h2 id="panel-title">Đảo Đèn Lồng</h2>
+          <p id="panel-description">Giúp Mây gom đom đóm và thắp lại năm chiếc đèn trên đảo trước bình minh.</p>
+          <button id="play" type="button" disabled>Bắt đầu</button>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/src/web/main.js"></script>
+  </body>
+</html>
